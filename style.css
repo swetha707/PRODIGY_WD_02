@@ -1,0 +1,110 @@
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.stopwatch-container {
+    background-color: #1f1f3a;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+#display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #1a1a2e;
+    border-radius: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 0;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+#startStopBtn {
+    background-color: #28a745; /* Green */
+}
+
+#startStopBtn.paused {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+
+#lapBtn {
+    background-color: #007bff; /* Blue */
+}
+
+#resetBtn {
+    background-color: #dc3545; /* Red */
+}
+
+.controls button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Style disabled buttons */
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+#lapsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#lapsList li {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lapsList li:first-child {
+    font-weight: bold;
+}
+
+#lapsList li:nth-child(even) {
+    background-color: #2a2a4a;
+}
